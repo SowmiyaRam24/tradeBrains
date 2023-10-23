@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react';
+import  { useContext ,useEffect} from "react";
+import Home from './components/Home';
+import Watchlist from './components/Watchlist'
+import AuthForm from './Athentication/AthenticationForm';
+import { Routes,Route,useNavigate,Navigate} from 'react-router-dom';
+import AuthContext from './Athentication/AuthenContext'
+export default function App() {
+  const authCtx= useContext(AuthContext);
+  const navigate=useNavigate();
+  useEffect(() => {
+    if (!authCtx.isLoggedIn) {
+      navigate("/");
+    }
+  }, [authCtx.isLoggedIn]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <Routes>
+    <Route path="/" exact  element={<AuthForm/>}/>
+     <Route path="/home"   element={ authCtx.isLoggedIn?<Home/>:<Navigate to="/"/>}/>
+     <Route path="/Watchlist"  element={ authCtx.isLoggedIn?<Watchlist/>:<Navigate to="/"/>}/>
+     </Routes>
+    </>
+  )
 }
 
-export default App;
+
+
+

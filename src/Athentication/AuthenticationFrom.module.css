@@ -1,0 +1,75 @@
+.auth {
+    margin: 3rem auto;
+    width: 95%;
+    max-width: 30rem;
+    border-radius: 2px;
+    background-color: #6e8ab0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border: 2px solid black;
+    text-align: center;
+    border-color: #175ace;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .auth h1 {
+    text-align: center;
+    color: rgb(10, 35, 144);
+  }
+  
+  .control {
+    margin-bottom: 0.5rem;
+  }
+  
+  .control label {
+    display: block;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .control input {
+    font: inherit;
+    background-color: #f1e1fc;
+    color: #222024;
+    border-radius: 4px;
+    border: 1px solid white;
+    width: 100%;
+    text-align: left;
+    padding: 0.25rem;
+  }z
+  
+  .actions {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .actions button {
+    cursor: pointer;
+    font: inherit;
+    color: white;
+    background-color: #4b85e9;
+    border: 1px solid #9f5ccc;
+    border-radius: 4px;
+    padding: 0.5rem 2.5rem;
+  }
+  
+  .actions button:hover {
+    background-color: #5e1ad3a8;
+    border-color: #873abb;
+  }
+  
+  .actions .toggle {
+    margin-top: 1rem;
+    background-color: transparent;
+    color: #1a0b9d;
+    border: none;
+    padding: 0.15rem 1.5rem;
+  }
+  
+  .actions .toggle:hover {
+    background-color: transparent;
+    color: #0a0a95;
+  }
